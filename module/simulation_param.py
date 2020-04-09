@@ -28,7 +28,7 @@ class SimParam:
             # plotting
             self.graph_xlim = (-0.1, 2.1)
             self.graph_ylim = (-0.1, 2.3)
-            self.framecount = 4000
+            self.framecount = 3000
 
         # option 2 (quaratine)
         if option == 2:
@@ -46,14 +46,15 @@ class SimParam:
 
             # initial state
             self.init_state = np.zeros((self.N, 7))
-            self.init_state[:, :2] = 1.8 * np.random.rand(self.N, 2) + 0.1
+            self.init_state[0:5, :2] = 0.9 * np.random.rand(5, 2) + 0.05
+            self.init_state[5:, :2] = 1.8 * np.random.rand(self.N-5, 2) + 0.1
             self.init_state[:, 2:4] = 0.5 * np.random.rand(self.N, 2) - 0.25
             self.init_state[0:5, 4] = 2
 
             # plotting
             self.graph_xlim = (-0.1, 2.1)
             self.graph_ylim = (-0.1, 2.3)
-            self.framecount = 4000
+            self.framecount = 3000
 
         # option 3 (low social distancing)
         if option == 3:
@@ -81,7 +82,7 @@ class SimParam:
             # plotting
             self.graph_xlim = (-0.1, 2.1)
             self.graph_ylim = (-0.1, 2.3)
-            self.framecount = 4000
+            self.framecount = 3000
 
         # option 4 (effective social distancing)
         if option == 4:
@@ -109,4 +110,4 @@ class SimParam:
             # plotting
             self.graph_xlim = (-0.1, 2.1)
             self.graph_ylim = (-0.1, 2.3)
-            self.framecount = 4000
+            self.framecount = 3000

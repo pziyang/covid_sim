@@ -43,6 +43,10 @@ s2 = ax.text(0.6 * max(s.graph_xlim), 0.9 * max(s.graph_ylim), '')
 
 stats, = ax2.plot([], [], 'b')
 
+# Set up formatting for the movie files
+Writer = animation.writers['ffmpeg']
+writer = Writer(fps=30, metadata=dict(artist='Me'), bitrate=1800)
+
 
 def init():
     """initialize animation"""
@@ -85,3 +89,5 @@ ani = animation.FuncAnimation(fig, animate, frames=s.framecount, repeat=False,
                               interval=1, blit=True, init_func=init)
 
 plt.show()
+
+ani.save('im.mp4', writer=writer)
