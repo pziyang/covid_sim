@@ -46,6 +46,6 @@ List of parameters
  ### A note on collision computation
 For 2 mobile humans (i.e., humans not observing social distancing) collision is implemented using perfectly elastic collision.
 
-For collision against immobile human (i.e., human observing social distancing), the mass of the immobile human is assumed to be inifinte. Effectively, it is similar to collison against a wall.
+For collision against immobile human (i.e., human observing social distancing), the mass of the immobile human is assumed to be infinte. Effectively, it is similar to collison against a wall.
 
 For elastic collison refer to [Wikipedia](https://en.wikipedia.org/wiki/Elastic_collision)
