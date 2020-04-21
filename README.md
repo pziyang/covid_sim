@@ -7,6 +7,11 @@ In this project, the user can change various parameters to study the effects of
 * social distancing
 * recovery
 
+In the following plots,
+* red markers = infected
+* blue markers = not infected
+* black markers = recovered
+
 ### No quarantine or social distancing (life as normal)
 ![Scenario 1](doc/sim_1.gif)
 
@@ -31,16 +36,16 @@ Requirements:
 The simulation parameters are set in the `modules\simulation_param.py`
 
 List of parameters
-1) N: Population size
-2) R: Recovery rate from onset of infection (in number of steps)
-3) S: Size of human used for collision computation (try to match marker size in matplotlib)
-4) init_state: array of Nx7 state matrix. Each row is a state vector `[x,y,u,v,infection_status,t0_infected, distancing_mode]`
+1) `N`: Population size
+2) `R`: Recovery rate from onset of infection (in number of steps)
+3) `S`: Size of human used for collision computation (try to match marker size in matplotlib)
+4) `init_state`: array of Nx7 state matrix. Each row is a state vector `[x,y,u,v,infection_status,t0_infected, distancing_mode]`
   * `x,y` 2D position
   * `u,v` 2D velocity
   * `infection_status` 0 = not infected, 1 = recovered, 2 = infected
   * `t0_infected` time at first infection
   * `distancing_mode` 0 = not distancing, 1 = distancing
-5) walls: array of Mx4 matrix. Each row is 2 points defining the wall face in the form `[x1,y1,x2,y2]`
+5) `walls`: array of Mx4 matrix. Each row is 2 points defining the wall face in the form `[x1,y1,x2,y2]`
   * `x,y` are coordinates
   
  ### A note on collision computation
